@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kol_flutter/constants.dart';
 import 'package:kol_flutter/screens/login/components/Background.dart';
 
+import 'CustomText.dart';
+import 'RoundedButtonWhite.dart';
 import 'RoundedTextField.dart';
 
 class Body extends StatelessWidget {
@@ -32,17 +36,17 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: 28),
 
-            Opacity(
-              // FORGOT PASSWORD
-              opacity: 0.6000000238418579,
-              child: Text("FORGOT PASSWORD",
-                  style: const TextStyle(
-                      color: const Color(0xffb4bbc9),
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
-                      fontStyle: FontStyle.normal,
-                      fontSize: 12.0),
-                  textAlign: TextAlign.left),
+            CustomText(
+              text: "FORGOT PASSWORD",
+              color: Color(0xffb4bbc9),
+              opacity:  0.6000000238418579,
+            ),
+
+            SizedBox(height: 60),
+
+            RoundedButtonWhite(
+              btnName: "CONTINUE",
+              onPressed: () {},
             )
           ],
         ),
@@ -50,3 +54,5 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
